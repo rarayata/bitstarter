@@ -72,7 +72,6 @@ if(require.main == module) {
         .parse(process.argv);
     
     if(program.url) {
-  console.log(program.url);
   rest.get(program.url).on('complete', function(result) {
   if (result instanceof Error) {
     console.error('Error: ' + result.message);
